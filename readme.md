@@ -39,6 +39,8 @@ Ejemplo:
 
 Respuesta:
 
+    // HTTP/1.0 200 OK
+    // Content-Type: application/json
     {
         "giftcard": {
             "id": "e64422b2",
@@ -83,12 +85,16 @@ Ejemplo:
 
 Respuesta 1, se ha cambiado el estado de la giftcard exitosamente:
 
+    // HTTP/1.0 200 OK
+    // Content-Type: application/json
     {
         "status": "The giftcard has been validated"
     }
 
 Respuesta 2, no se ha cambiado el estado de la giftcard:
 
+    // HTTP/1.0 400 OK
+    // Content-Type: application/json
     {
         "validation_date": "2014-01-07T22:21:36+00:00",
         "status": "The giftcard has already been validated"
