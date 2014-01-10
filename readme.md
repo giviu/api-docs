@@ -1,10 +1,20 @@
 # Giviu API docs
 
-Esta es la documentacion de la API publica de Giviu.
+Esta es la documentación de la API pública de Giviu.
+
+## Consideración previa
+
+Esta implementación fue desarrollada durante el transcurso de un almuerzo y muchos detalles importantes
+han sido dejados para una versión posterior. Por ejemplo:
+
+  1. Ortografía (ha sido revisada en la versión actual)
+  2. Versión Protocolo HTTP (los snippets de ejemplo han sido tomados desde un servidor de desarrollo)
+  3. Status Code de respuesta: serán revisados en una versión posterior
+  4. Algunos artefactos/restricciones REST, como hypermedia, no son necesarios para los propósitos de esta implementación de pruebas
 
 ## Contenido
 
-Giviu expone una API rest bajo el siguiente URL:
+Giviu expone una API REST bajo el siguiente URL:
 
     https://www.giviu.com/api
 
@@ -12,15 +22,15 @@ Todos los requests deben ser dirigidos hacia este endpoint.
 
 ## Parametros requeridos
 
-Giviu expone una API publica, sin embargo, todas las solicitudes deben
-llevar un parametro `client_id`. Este parametro es entregado a cada uno de
+Giviu expone una API pública, sin embargo, todas las solicitudes deben
+llevar un parámetro `client_id`. Este parámetro es entregado a cada uno de
 los socios y debe ser solicitado a `api@giviu.com`. Para los ejemplos de esta
-documentacion, utilizaremos el client_id siguiente:
+documentación, utilizaremos el client_id siguiente:
 
     client_id: 62b5bf5404
 
 El client_id es *siempre* un string de 56 caracteres alfanumericos. Aunque en
-estos ejemplos se usara uno de tan solo 10 caracteres.
+estos ejemplos se usará uno de tan solo 10 caracteres.
 
 ## Recursos
 
@@ -30,7 +40,7 @@ estos ejemplos se usara uno de tan solo 10 caracteres.
 
 Metodo HTTP: GET
 
-El codigo de giftcard es enviado al cliente y se compone de un string de
+El código de giftcard es enviado al cliente y se compone de un string de
 caracteres alfanumericos.
 
 Ejemplo:
@@ -62,8 +72,8 @@ resultados posibles son:
  encuentran en la solicitud, no hay un parametro client_id, etc.
  * Not Found (Http Status Code: 404): La giftcard solicitada no existe.
 
-En esta version inicial de la API, no se especifica que problema en particular es
-el que genera un resultado. En ediciones posteriores esta informacion sera incluida
+En esta versión inicial de la API, no se especifica que problema en particular es
+el que genera un resultado. En ediciones posteriores esta información sera incluida
 en formato JSON.
 
 ### Validar una giftcard
