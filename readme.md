@@ -2,19 +2,9 @@
 
 Esta es la documentación de la API pública de Giviu.
 
-## Consideración previa
-
-Esta implementación fue desarrollada durante el transcurso de un almuerzo y muchos detalles importantes
-han sido dejados para una versión posterior. Por ejemplo:
-
-  1. Ortografía (ha sido revisada en la versión actual)
-  2. Versión Protocolo HTTP (los snippets de ejemplo han sido tomados desde un servidor de desarrollo)
-  3. Status Code de respuesta: serán revisados en una versión posterior
-  4. Algunos artefactos/restricciones REST, como hypermedia, no son necesarios para los propósitos de esta implementación de pruebas
-
 ## Contenido
 
-Giviu expone una API REST bajo el siguiente URL:
+Giviu expone una API Http bajo el siguiente URL:
 
     https://www.giviu.com/api
 
@@ -65,7 +55,7 @@ Respuesta:
 
 #### Otros resultados posibles
 
-Giviu presenta una API Rest y se ajusta a las definiciones de esta arquitectura, otros
+Giviu presenta una API Http y se ajusta a algunas de las definiciones de esta arquitectura, otros
 resultados posibles son:
 
  * Bad Request (Http Status Code: 400): Solicitud erronea, no todos los parametros se
